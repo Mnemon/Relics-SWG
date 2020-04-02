@@ -41,6 +41,8 @@ mineralTool = "object/tangible/survey_tool/survey_tool_mineral.iff"
 
 chemicalTool = "object/tangible/survey_tool/survey_tool_liquid.iff"
 
+windTool = "object/tangible/survey_tool/survey_tool_wind.iff"
+
 slitherhorn = "object/tangible/instrument/slitherhorn.iff"
 
 marojMelon = "object/tangible/food/foraged/foraged_fruit_s1.iff"
@@ -52,7 +54,7 @@ professionSpecificItems = {
 	combat_marksman = { marksmanPistol, marksmanCarbine, marksmanRifle },
 	crafting_artisan = { foodTool, chemicalTool, mineralTool, windTool },
 	jedi = { },
-	outdoors_scout = { },
+	outdoors_scout = { marksmanPistol, marksmanCarbine, marksmanRifle },
 	science_medic = { foodTool, chemicalTool, mineralTool, windTool },
 	social_entertainer = { slitherhorn }
 }
