@@ -368,3 +368,7 @@ includeFile("groups/wearables/wearables_common.lua")
 includeFile("groups/wearables/wearables_rare.lua")
 includeFile("groups/wearables/wearables_scarce.lua")
 includeFile("groups/wearables/wearables_uncommon.lua")
+
+-- Relics Additions
+includeFile("groups/relics_paintings.lua")
+includeFile("groups/named_crystals.lua")
