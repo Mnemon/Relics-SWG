@@ -44,15 +44,15 @@ turretAutoFireTimeout = 20
 maxBasesPerPlayer = 3
 
 -- xp bonus for faction controlling a planet
-bonusXP = 15
+bonusXP = 5
 
 -- thresholds for scaling crackdown npc's difficulty, first threshold should always be 0.
 difficutlyScalingThresholds = {0, 64}
 
 -- discount percentage for side losing&winning the gcw.  negative value of increase in price (penality).  positive for a decrease (Bonus)
 
-winnerBonus = 0
-loserBonus = -30
+winnerBonus = 5
+loserBonus = -5
 
 -- Spawn turrets and minefields when base is placed 1=true 0=false
 spawnDefenses = 1
