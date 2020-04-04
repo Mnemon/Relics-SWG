@@ -42,7 +42,7 @@
 
 
 object_creature_player_human_male = object_creature_player_shared_human_male:new {
-	baseHAM = { 100, 100, 100, 100, 100, 100, 100, 100, 100 },
+	baseHAM = { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 	gameObjectType = 1033,
 	zoneComponent = "PlayerZoneComponent",
 	objectMenuComponent = "PlayerObjectMenuComponent",
