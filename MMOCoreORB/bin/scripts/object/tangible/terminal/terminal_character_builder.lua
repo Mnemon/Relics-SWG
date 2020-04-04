@@ -56,11 +56,11 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 
 	templateType = CHARACTERBUILDERTERMINAL,
 
-	glowyBadgeIds = {12, 14, 15, 16, 17, 19, 20, 21, 23, 30, 38, 39, 71, 105, 106, 107},
+	glowyBadgeIds = {},
 
 	villageBranchUnlocks = {
-		"force_sensitive_combat_prowess_ranged_accuracy",
-		"force_sensitive_combat_prowess_ranged_speed",
+		"force_sensitive_heightened_senses_persuasion",
+		"force_sensitive_heightened_senses_luck",
 		"force_sensitive_combat_prowess_melee_accuracy",
 		"force_sensitive_combat_prowess_melee_speed",
 		"force_sensitive_enhanced_reflexes_ranged_defense",
@@ -1517,12 +1517,12 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			"Unlearn All Skills", "unlearn_all_skills",
 			-- "Cleanse Character", "cleanse_character",
 			"Enhance Character", "enhance_character",
-			-- "Jedi",
-			-- {
-				-- --"Unlock Jedi Initiate", "unlock_jedi_initiate",
+			 "Jedi",
+			 {
+				"Unlock Jedi Initiate", "unlock_jedi_initiate",
 				-- "Unlock FRS Light Side", "frs_light_side",
 				-- "Unlock FRS Dark Side", "frs_dark_side"
-			-- },
+			 },
 			-- "Fill Force Bar", "fill_force_bar",
 			-- "Reset Buffs", "reset_buffs",
 			-- "Learn Languages", "language",
@@ -1534,7 +1534,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			-- "Apply Fire DOT", "apply_fire_dot",
 			-- "Clear DOTs", "clear_dots",
 			-- "Max XP", "max_xp",
-			-- "Become Glowy", "become_glowy",
+			"Become Glowy", "become_glowy",
 			-- "Faction Points",
 			-- {
 				-- "Imperial", "faction_imperial",
@@ -2708,8 +2708,8 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Clothing and Armor Crafting Tool", "object/tangible/crafting/station/clothing_tool.iff",
 					"Food and Chemical Crafting Tool", "object/tangible/crafting/station/food_tool.iff",
 					"Generic Crafting Tool", "object/tangible/crafting/station/generic_tool.iff",
-					"Lightsaber Crafting Toolkit", "object/tangible/crafting/station/jedi_tool.iff",
-					"Starship Crafting Tool", "object/tangible/crafting/station/space_tool.iff",
+					--"Lightsaber Crafting Toolkit", "object/tangible/crafting/station/jedi_tool.iff",
+					--"Starship Crafting Tool", "object/tangible/crafting/station/space_tool.iff",
 					"Structure and Furniture Crafting Tool", "object/tangible/crafting/station/structure_tool.iff",
 					"Weapon, Droid, and General Item Crafting Tool", "object/tangible/crafting/station/weapon_tool.iff"
 				},
