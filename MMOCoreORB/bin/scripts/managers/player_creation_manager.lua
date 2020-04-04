@@ -49,6 +49,8 @@ marojMelon = "object/tangible/food/foraged/foraged_fruit_s1.iff"
 
 speeder = "object/tangible/deed/vehicle_deed/speederbike_deed.iff"
 
+backpack = "object/tangible/wearables/backpack/backpack_s01.iff"
+
 professionSpecificItems = {
 	combat_brawler = { brawlerOneHander, brawlerTwoHander, brawlerPolearm },
 	combat_marksman = { marksmanPistol, marksmanCarbine, marksmanRifle },
@@ -59,4 +61,4 @@ professionSpecificItems = {
 	social_entertainer = { slitherhorn }
 }
 
-commonStartingItems = { marojMelon, survivalKnife, speeder, genericTool }
+commonStartingItems = { marojMelon, survivalKnife, speeder, genericTool, backpack }
