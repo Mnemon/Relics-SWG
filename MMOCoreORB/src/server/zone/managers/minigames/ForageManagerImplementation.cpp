@@ -102,7 +102,7 @@ void ForageManagerImplementation::startForaging(CreatureObject* player, int fora
 		return;
 
 	Reference<Task*> foragingEvent = new ForagingEvent(player, forageType, playerX, playerY, zone->getZoneName());
-	player->addPendingTask("foraging", foragingEvent, 8500);
+	player->addPendingTask("foraging", foragingEvent, 2000);
 
 	if(forageType == ForageManager::LAIR){
 		player->sendSystemMessage("You begin to search the lair for creatures"); //"You begin to search the lair for creatures."
