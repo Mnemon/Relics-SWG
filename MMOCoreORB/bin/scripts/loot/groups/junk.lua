@@ -5,6 +5,10 @@ junk = {
 	minimumLevel = 0,
 	maximumLevel = 0,
 	lootItems = {
+	{groupTemplate = "loot_kit_parts", weight = 2000000},
+		{itemTemplate = "armor_attachments", weight = 1000000},
+ 		{itemTemplate = "clothing_attachments", weight = 1000000},
+		{itemTemplate = "relics_paintings", weight = 1000000},
 		{itemTemplate = "broken_binoculars_s1", weight = 285500},
 		{itemTemplate = "broken_binoculars_s2", weight = 285500},
 		{itemTemplate = "broken_decryptor", weight = 285500},
