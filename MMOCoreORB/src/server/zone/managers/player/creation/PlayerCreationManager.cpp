@@ -326,7 +326,7 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 	TemplateManager* templateManager = TemplateManager::instance();
 
 	auto client = callback->getClient();
-
+//characters per account
 	if (client->getCharacterCount(zoneServer.get()->getGalaxyID()) >= 4) {
 		ErrorMessage* errMsg = new ErrorMessage("Create Error", "You are limited to 4 characters per galaxy.", 0x0);
 		client->sendMessage(errMsg);
