@@ -103,7 +103,7 @@ void EntertainingSessionImplementation::doEntertainerPatronEffects() {
 			try {
 				//**VERIFY THE PATRON IS NOT ON THE DENY SERVICE LIST
 
-				if (creo->isInRange(patron, 10.0f)) {
+				if (creo->isInRange(patron, 65.0f)) {
 					healWounds(patron, woundHeal*(flourishCount+1), shockHeal*(flourishCount+1));
 					increaseEntertainerBuff(patron);
 
@@ -632,8 +632,8 @@ void EntertainingSessionImplementation::addEntertainerBuffDuration(CreatureObjec
 
 	buffDuration += duration;
 
-	if (buffDuration > (120.0f + (10.0f / 60.0f)) ) // 2 hrs 10 seconds
-		buffDuration = (120.0f + (10.0f / 60.0f)); // 2hrs 10 seconds
+	if (buffDuration > (190.0f + (10.0f / 60.0f)) ) // 2 hrs 10 seconds to 3 hours
+		buffDuration = (190.0f + (10.0f / 60.0f)); // 2 hrs 10 seconds to 3 hours
 
 	setEntertainerBuffDuration(creature, performanceType, buffDuration);
 }
