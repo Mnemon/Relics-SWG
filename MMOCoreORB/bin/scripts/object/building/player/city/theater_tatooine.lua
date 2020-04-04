@@ -42,7 +42,7 @@
 
 
 object_building_player_city_theater_tatooine = object_building_player_city_shared_theater_tatooine:new {
-	lotSize = 3,
+	lotSize = 1,
 	baseMaintenanceRate = 50,
 	allowedZones = {"dantooine", "lok", "tatooine"},
 	length = 5,
@@ -60,7 +60,8 @@ object_building_player_city_theater_tatooine = object_building_player_city_share
 	zoneComponent = "StructureZoneComponent",
 	childObjects = {
 		{templateFile = "object/tangible/sign/player/house_address_tatooine.iff", x = 11.1, z = 3.08, y = -14, ox = 0, oy = -0.707107, oz = 0, ow = 0.707107, cellid = -1, containmentType = -1},
-		{templateFile = "object/tangible/terminal/terminal_player_structure.iff", x = -7, z = 4.75, y = -14.2, ox = 0, oy = 0.707107, oz = 0, ow = 0.707107, cellid = 1, containmentType = -1}
+		{templateFile = "object/tangible/terminal/terminal_player_structure.iff", x = -7, z = 4.75, y = -14.2, ox = 0, oy = 0.707107, oz = 0, ow = 0.707107, cellid = 1, containmentType = -1},
+		{templateFile = "object/tangible/terminal/terminal_bazaar.iff", x = 8.3, z = 4.7, y = -10.8, ox = 0, oy = 0.707, oz = 0, ow = -0.707, cellid = 1, containmentType = -1},
 	},
 	shopSigns = {
 		{templateFile = "object/tangible/sign/player/house_address_tatooine.iff", x = 11.1, z = 3.08, y = -14, ox = 0, oy = -0.707107, oz = 0, ow = 0.707107, cellid = -1, containmentType = -1, requiredSkill = "", suiItem = "@player_structure:house_address"},
