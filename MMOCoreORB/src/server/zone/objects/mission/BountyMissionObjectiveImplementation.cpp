@@ -585,8 +585,8 @@ void BountyMissionObjectiveImplementation::handlePlayerKilled(ManagedObject* arg
 			if (zoneServer != nullptr) {
 				ManagedReference<CreatureObject*> target = zoneServer->getObject(mission->getTargetObjectId()).castTo<CreatureObject*>();
 				if (target != nullptr) {
-					int minXpLoss = -50000;
-					int maxXpLoss = -500000;
+					int minXpLoss = -7143; // offsets 7x xp
+					int maxXpLoss = -71429; // offsets 7x xp
 
 					VisibilityManager::instance()->clearVisibility(target);
 					int xpLoss = mission->getRewardCredits() * -2;

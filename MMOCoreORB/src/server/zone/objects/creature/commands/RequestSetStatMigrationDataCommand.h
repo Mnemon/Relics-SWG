@@ -85,7 +85,7 @@ public:
 		//Player is in the tutorial zone and is allowed to migrate stats.
 		Zone* zone = creature->getZone();
 
-		if (zone != nullptr && zone->getZoneName() == "tutorial")
+		if (zone != NULL && (zone->getZoneName() == "tutorial" or "tatooine" or "corellia" or "dantooine" or "dathomir" or "endor" or "lok" or "naboo" or "rori" or "talus" or "yavin4"))
 			session->migrateStats();
 
 
