@@ -568,8 +568,13 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 	ghost->addChatRoom(chatManager->getAuctionRoom()->getRoomID());
 
 	ManagedReference<SuiMessageBox*> box = new SuiMessageBox(playerCreature, SuiWindowType::NONE);
-	box->setPromptTitle("PLEASE NOTE");
-	box->setPromptText("You are limited to creating one character per hour. Attempting to create another character or deleting your character before the 1 hour timer expires will reset the timer.");
+	box->setPromptTitle("Welcome to Relics");
+	box->setPromptText("Thank you for joining Relics! Please note, you are limited to creating one character per hour. If you have any questions please use Relics Chat or our discord. May the force be with you!");
+	
+	String playerName = playerCreature->getFirstName();
+ 	StringBuffer zBroadcast;
+ 	zBroadcast << "\\#cc9966 There is a disturbance in the force! " << playerName << " had joined Relics!";
+ 	playerCreature->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, zBroadcast.toString());
 
 	ghost->addSuiBox(box);
 	playerCreature->sendMessage(box->generateMessage());
