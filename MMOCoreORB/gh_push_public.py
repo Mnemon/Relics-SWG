@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import urllib2
+import urllib.request
 import re
 import xml.etree.ElementTree as ET
 user = 'relicsredux'
@@ -11,7 +11,7 @@ global token
 def login():
 	sessionRE = re.compile("success-(.*)", re.I)
 	url  = 'http://galaxyharvester.net/authUser.py?loginu=' + user + '&passu=' + passu
-	response = urllib2.urlopen(url)
+	response = urllib.request.urlopen(url)
 	html = response.read()
 	token = sessionRE.match(html)
 	#print token.group(1)
@@ -19,7 +19,7 @@ def login():
 
 def checkSpawn(name):
 	url = 'http://galaxyharvester.net/getResourceByName.py?name=' + name + '&galaxy=' + galaxy
-	response = urllib2.urlopen(url)
+	response = urllib.request.urlopen(url)
 	xml = response.read()
 	xmldoc = ET.fromstring(xml)
 	result = xmldoc.find('resultText').text
@@ -81,7 +81,7 @@ def postSpawn(token, name, res, planet, CR, CD, DR, FL, HR, MA, PE, OQ, SR, UT, 
 
 
 	#print url
-	opener = urllib2.build_opener()
+	opener = urllib.request.build_opener()
 	ghsid = 'gh_sid=' + token
 	opener.addheaders.append(('Cookie', ghsid))
 	response = opener.open(url)
