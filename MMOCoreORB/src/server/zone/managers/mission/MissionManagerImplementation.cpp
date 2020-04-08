@@ -185,19 +185,19 @@ void MissionManagerImplementation::handleMissionListRequest(MissionTerminal* mis
 	if (missionBag == nullptr)
 		return;
 
-	int maximumNumberOfItemsInMissionBag = 12;
+	int maximumNumberOfItemsInMissionBag = 15;
 
 
 	if (enableFactionalCraftingMissions) {
-		maximumNumberOfItemsInMissionBag += 6;
+		maximumNumberOfItemsInMissionBag += 15;
 	}
 
 	if (enableFactionalReconMissions) {
-		maximumNumberOfItemsInMissionBag += 6;
+		maximumNumberOfItemsInMissionBag += 15;
 	}
 
 	if (enableFactionalEntertainerMissions) {
-		maximumNumberOfItemsInMissionBag += 12; //Both musician and dancer.
+		maximumNumberOfItemsInMissionBag += 15; //Both musician and dancer.
 	}
 
 	while (missionBag->getContainerObjectsSize() < maximumNumberOfItemsInMissionBag) {
@@ -548,9 +548,9 @@ void MissionManagerImplementation::randomizeGeneralTerminalMissions(CreatureObje
 		//Clear mission type before calling mission generators.
 		mission->setTypeCRC(0);
 
-		if (i < 6) {
+		if (i < 15) {
 			randomizeGenericDestroyMission(player, mission, Factions::FACTIONNEUTRAL);
-		} else if (i < 12) {
+		} else if (i < 30) {
 			randomizeGenericDeliverMission(player, mission, Factions::FACTIONNEUTRAL);
 		}
 
@@ -577,9 +577,9 @@ void MissionManagerImplementation::randomizeArtisanTerminalMissions(CreatureObje
 		//Clear mission type before calling mission generators.
 		mission->setTypeCRC(0);
 
-		if (i < 6) {
+		if (i < 15) {
 			randomizeGenericSurveyMission(player, mission, Factions::FACTIONNEUTRAL);
-		} else if (i < 12) {
+		} else if (i < 30) {
 			randomizeGenericCraftingMission(player, mission, Factions::FACTIONNEUTRAL);
 		}
 
@@ -606,9 +606,9 @@ void MissionManagerImplementation::randomizeEntertainerTerminalMissions(Creature
 		//Clear mission type before calling mission generators.
 		mission->setTypeCRC(0);
 
-		if (i < 6) {
+		if (i < 15) {
 			randomizeGenericEntertainerMission(player, mission, Factions::FACTIONNEUTRAL, MissionTypes::DANCER);
-		} else if (i < 12) {
+		} else if (i < 30) {
 			randomizeGenericEntertainerMission(player, mission, Factions::FACTIONNEUTRAL, MissionTypes::MUSICIAN);
 		}
 
@@ -635,9 +635,9 @@ void MissionManagerImplementation::randomizeScoutTerminalMissions(CreatureObject
 		//Clear mission type before calling mission generators.
 		mission->setTypeCRC(0);
 
-		if (i < 6) {
+		if (i < 15) {
 			randomizeGenericReconMission(player, mission, Factions::FACTIONNEUTRAL);
-		} else if (i < 12) {
+		} else if (i < 30) {
 			randomizeGenericHuntingMission(player, mission, Factions::FACTIONNEUTRAL);
 		}
 
@@ -694,21 +694,21 @@ void MissionManagerImplementation::randomizeFactionTerminalMissions(CreatureObje
 		//Clear mission type before calling mission generators.
 		mission->setTypeCRC(0);
 
-		if (i < 6) {
+		if (i < 15) {
 			randomizeGenericDestroyMission(player, mission, faction);
-		} else if (i < 12) {
+		} else if (i < 30) {
 			randomizeGenericDeliverMission(player, mission, faction);
 		} else {
-			if (enableFactionalCraftingMissions && numberOfCraftingMissions < 6) {
+			if (enableFactionalCraftingMissions && numberOfCraftingMissions < 15) {
 				randomizeGenericCraftingMission(player, mission, faction);
 				numberOfCraftingMissions++;
-			} else if (enableFactionalReconMissions && numberOfReconMissions < 6) {
+			} else if (enableFactionalReconMissions && numberOfReconMissions < 15) {
 				randomizeGenericReconMission(player, mission, faction);
 				numberOfReconMissions++;
-			} else if (enableFactionalEntertainerMissions && numberOfDancerMissions < 6) {
+			} else if (enableFactionalEntertainerMissions && numberOfDancerMissions < 15) {
 				randomizeGenericEntertainerMission(player, mission, faction, MissionTypes::DANCER);
 				numberOfDancerMissions++;
-			} else if (enableFactionalEntertainerMissions && numberOfMusicianMissions < 6) {
+			} else if (enableFactionalEntertainerMissions && numberOfMusicianMissions < 15) {
 				randomizeGenericEntertainerMission(player, mission, faction, MissionTypes::MUSICIAN);
 				numberOfMusicianMissions++;
 			}
@@ -755,10 +755,21 @@ void MissionManagerImplementation::randomizeGenericDestroyMission(CreatureObject
 		difficulty = 4;
 
 	int diffDisplay = difficultyLevel + 7;
-	if (player->isGrouped())
+	
+	PlayerObject* targetGhost = player->getPlayerObject();
+
+	String level = targetGhost->getScreenPlayData("mission_level_choice", "levelChoice");
+  	int levelChoice = Integer::valueOf(level);
+  	
+	if (levelChoice > 0)
+		diffDisplay += levelChoice;
+	else if (player->isGrouped())
 		diffDisplay += player->getGroup()->getGroupLevel();
 	else
 		diffDisplay += playerLevel;
+	
+	String dir = targetGhost->getScreenPlayData("mission_direction_choice", "directionChoice");
+  	float dirChoice = Float::valueOf(dir);
 
 	String building = lairTemplateObject->getMissionBuilding(difficulty);
 
@@ -783,8 +794,31 @@ void MissionManagerImplementation::randomizeGenericDestroyMission(CreatureObject
 	int maximumNumberOfTries = 20;
 	while (!foundPosition && maximumNumberOfTries-- > 0) {
 		foundPosition = true;
+		
+		float direction = (float)System::random(360);
+		
+		// Player direction choice -/+ 8 degrees deviation from center
+		if (dirChoice > 0){
+			int dev = System::random(8);
+			int isMinus = System::random(100);
+			
+			if (isMinus > 49)
+				dev *= -1;
+			
+			direction = dirChoice + dev;
+			
+			// Fix degree values greater than 360
+			if (direction > 360)
+				direction -= 360;
+		}
 
-		startPos = player->getWorldCoordinate(System::random(1000) + 1000, (float)System::random(360), false);
+		// Start position, always based on "facing north"
+		int distance = System::random(1000) + 1000;
+		float angleRads = direction * (M_PI / 180.0f);
+		float newAngle = angleRads + (M_PI / 2);
+		startPos.setX(player->getWorldPositionX() + (cos(newAngle) * distance)); // client has x/y inverted
+		startPos.setY(player->getWorldPositionY() + (sin(newAngle) * distance));
+		startPos.setZ(0.0f);
 
 		if (zone->isWithinBoundaries(startPos)) {
 			float height = zone->getHeight(startPos.getX(), startPos.getY());
@@ -1478,21 +1512,46 @@ void MissionManagerImplementation::randomizeGenericHuntingMission(CreatureObject
 	//50% easy missions, 33% medium missions, 17% hard missions.
 	int difficulty = System::random(5) + 1;
 	String diffString;
+	// Difficulty based on the number of creatures
 	if (difficulty <= 3) {
 		difficulty = 1;
-		diffString = "easy";
+		diffString = "easy"; // 15 animals
 	} else if (difficulty <= 5) {
 		difficulty = 2;
-		diffString = "medium";
+		diffString = "medium"; // 30 animals
 	} else {
 		difficulty = 3;
-		diffString = "hard";
+		diffString = "hard"; // 45 animals
 	}
 
-	int baseReward = 500 + (difficulty * 100 * randomLairSpawn->getMinDifficulty());
-	mission->setRewardCredits(baseReward + System::random(100));
+	// Prevent every mission for same animal type from having almost exactly the same payout.
+	float diffRange = randomLairSpawn->getMaxDifficulty() - randomLairSpawn->getMinDifficulty() + 1.0f;
+
+	float creatureLevelPart = 12900.0f * ((((90.0f + System::random(9.0f)) < ((float)randomLairSpawn->getMinDifficulty() + System::random(diffRange)) ) ? (90.0f + System::random(9.0f)) : ((float)randomLairSpawn->getMinDifficulty() + System::random(diffRange))) / 99.0f);
+
+//REMOVE	float creatureLevelPart = 12900.0f * (MIN(90.0f + System::random(9.0f), (float)randomLairSpawn->getMinDifficulty() + System::random(diffRange)) / 99.0f);
+	float critterNumberPart = 100.0f; // 100 only used if randomLairSpawn->getMaxDifficulty() is null/broken
+	
+	// Throttle bonus for num of creatures based on how easy they are to kill
+	if (randomLairSpawn->getMaxDifficulty() < 12) {
+		critterNumberPart = 1000.0f * ((float)difficulty / 3.0f);
+	} else if (randomLairSpawn->getMaxDifficulty() < 45){
+		critterNumberPart = 5000.0f * ((float)difficulty / 3.0f);
+	} else if (randomLairSpawn->getMaxDifficulty() < 65){
+		critterNumberPart = 8000.0f * ((float)difficulty / 3.0f);
+	} else if (randomLairSpawn->getMaxDifficulty() > 64) {
+		critterNumberPart = 12000.0f * ((float)difficulty / 3.0f);
+	}
+	
+	float initialReward = creatureLevelPart + critterNumberPart + System::random(100.0f); // 12,900 + 12,000 + 100 = 25,000
+	
+	// Scout and Ranger bonuses
+	float forageBonus = initialReward * ((((125.0f < player->getSkillMod("foraging")) ? 125.0f : player->getSkillMod("foraging"))+ 1.0f) / 1250.0f); // Upto +10% = 2,500
+	float knowledgeBonus = initialReward * (((125.0f < player->getSkillMod("creature_knowledge") + 1.0f) ? 125.0f : player->getSkillMod("creature_knowledge") + 1.0f)/ 1250.0f); // Upto +10% = 2,500
+	// Max possible payout: 30,000 Credits
+	float finalReward = initialReward + forageBonus + knowledgeBonus;
+ 	mission->setRewardCredits((int)finalReward);
 	mission->setMissionDifficulty(difficulty);
-	mission->setMissionTitle("mission/mission_npc_hunting_neutral_" + diffString, "m" + String::valueOf(randTexts) + "t");
 	mission->setMissionDescription("mission/mission_npc_hunting_neutral_" + diffString, "m" + String::valueOf(randTexts) + "o");
 
 	mission->setTypeCRC(MissionTypes::HUNTING);
@@ -1729,7 +1788,17 @@ LairSpawn* MissionManagerImplementation::getRandomLairSpawn(CreatureObject* play
 	bool foundLair = false;
 	int counter = availableLairList->size();
 	int playerLevel = server->getPlayerManager()->calculatePlayerLevel(player);
-	if (player->isGrouped())
+
+	PlayerObject* targetGhost = player->getPlayerObject();
+
+	String level = targetGhost->getScreenPlayData("mission_level_choice", "levelChoice");
+
+  	int levelChoice = Integer::valueOf(level);
+
+	if (levelChoice > 0) 
+		playerLevel = levelChoice;
+
+	else if(player->isGrouped())
 		playerLevel = player->getGroup()->getGroupLevel();
 
 	LairSpawn* lairSpawn = nullptr;
