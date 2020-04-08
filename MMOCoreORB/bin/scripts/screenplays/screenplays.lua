@@ -675,3 +675,4 @@ includeFile("../custom_scripts/screenplays/screenplays.lua")
 -- Relics
 includeFile("relics/mission_direction_choice.lua")
 includeFile("relics/mission_level_choice.lua")
+includeFile("relics/city_perks.lua")
