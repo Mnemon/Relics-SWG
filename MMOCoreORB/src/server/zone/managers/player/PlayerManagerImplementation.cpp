@@ -1551,7 +1551,7 @@ void PlayerManagerImplementation::sendPlayerToCloner(CreatureObject* player, uin
 	// Jedi experience loss.
 	if (ghost->getJediState() >= 2) {
 		int jediXpCap = ghost->getXpCap("jedi_general");
-		int xpLoss = (int)(jediXpCap * -0.05);
+		int xpLoss = (int)(jediXpCap * -0.005);
 		int curExp = ghost->getExperience("jedi_general");
 
 		int negXpCap = -10000000; // Cap on negative jedi experience
