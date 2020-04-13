@@ -252,7 +252,8 @@ lok = {
 	},
 
 	planetTravelPoints = {
-		{name = "Nym's Stronghold", x = 478.92676, z = 9, y = 5511.9565, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1}
+		{name = "Nym's Stronghold", x = 478.92676, z = 9, y = 5511.9565, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
+		{name = "Imperial Outpost", x = -1758, z = 12, y = -3039, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 	},
 
 	badgeAreas = {
@@ -522,6 +523,8 @@ tatooine = {
 		{name = "Anchorhead Shuttleport", x = 47.565128, z = 52, y = -5338.9072, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 		{name = "Mos Entha Spaceport", x = 1266.0996, z = 7, y = 3065.1392, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 		{name = "Mos Entha Shuttle B", x = 1395.447, z = 7, y = 3467.0117, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
+		{name = "Mos Taike", x = 3753, z = 6, y = 2266, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
+		{name = "Wayfar", x = -5071, z = 75, y = -6546, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 		{name = "Mos Entha Shuttle A", x = 1730.8828, z = 7, y = 3184.6135, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1}
 	},
 
