@@ -68,6 +68,8 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 	},
 
 	itemList = {
+		"Enhance Character", "enhance_character",
+		"Reset Buffs", "reset_buffs",		
 		"Character Options",
 		{
 			"Learn Skill",
@@ -1516,7 +1518,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			},
 			"Unlearn All Skills", "unlearn_all_skills",
 			-- "Cleanse Character", "cleanse_character",
-			"Enhance Character", "enhance_character",
+			
 			 "Jedi",
 			 {
 				"Unlock Jedi Initiate", "unlock_jedi_initiate",
@@ -1524,7 +1526,6 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				-- "Unlock FRS Dark Side", "frs_dark_side"
 			 },
 			-- "Fill Force Bar", "fill_force_bar",
-			"Reset Buffs", "reset_buffs",
 			-- "Learn Languages", "language",
 			-- "Credits", "credits",
 			-- "Apply ALL DoTs", "apply_all_dots",
