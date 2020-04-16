@@ -1517,14 +1517,15 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				-- }
 			},
 			"Unlearn All Skills", "unlearn_all_skills",
+			"Unlock Jedi Initiate", "unlock_jedi_initiate",
 			-- "Cleanse Character", "cleanse_character",
 			
-			 "Jedi",
-			 {
-				"Unlock Jedi Initiate", "unlock_jedi_initiate",
-				-- "Unlock FRS Light Side", "frs_light_side",
-				-- "Unlock FRS Dark Side", "frs_dark_side"
-			 },
+			 -- "Jedi",
+			 -- {
+				
+				-- -- "Unlock FRS Light Side", "frs_light_side",
+				-- -- "Unlock FRS Dark Side", "frs_dark_side"
+			 -- },
 			-- "Fill Force Bar", "fill_force_bar",
 			-- "Learn Languages", "language",
 			-- "Credits", "credits",
@@ -1535,7 +1536,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			-- "Apply Fire DOT", "apply_fire_dot",
 			-- "Clear DOTs", "clear_dots",
 			-- "Max XP", "max_xp",
-			"Become Glowy", "become_glowy",
+			-- "Become Glowy", "become_glowy",
 			-- "Faction Points",
 			-- {
 				-- "Imperial", "faction_imperial",
