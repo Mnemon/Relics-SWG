@@ -5,15 +5,15 @@ mission_level_choice = ScreenPlay:new {
 
 	levels = {
 		{levelRange = "Reset Group Level", levelSelect = 0},
-		{levelRange = "Group Level 1", levelSelect = 1},
-		{levelRange = "Group Level 2", levelSelect = 2}, 
-		{levelRange = "Group Level 12", levelSelect = 12}, 
-		{levelRange = "Group Level 25", levelSelect = 25}, 
-		{levelRange = "Group Level 35", levelSelect = 35}, 
-		{levelRange = "Group Level 45", levelSelect = 45}, 
-		{levelRange = "Group Level 60", levelSelect = 60}, 
-		{levelRange = "Group Level 135", levelSelect = 135}, 
-		{levelRange = "Group Level 200", levelSelect = 200}, 
+		{levelRange = "Newbie (Lvl 1)", levelSelect = 1},
+		{levelRange = "Novice (Lvl 2)", levelSelect = 2}, 
+		{levelRange = "Apprentice Lvl 12)", levelSelect = 12}, 
+		{levelRange = "Intermediate (Lvl 25)", levelSelect = 25}, 
+		{levelRange = "Advanced (Lvl 35)", levelSelect = 35}, 
+		{levelRange = "Expert (Lvl 45)", levelSelect = 45}, 
+		{levelRange = "Master (Lvl 60)", levelSelect = 60}, 
+		{levelRange = "Epic (Lvl 135)", levelSelect = 135}, 
+		{levelRange = "Legendary (Lvl 200)", levelSelect = 200}, 
 	}
 }
 
