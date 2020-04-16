@@ -2,11 +2,11 @@ escaped_rancor = Creature:new {
 	customName = "Escaped Rancor",
 	socialGroup = "rancor",
 	faction = "",
-	level = 200,
+	level = 243,
 	chanceHit = 15,
 	damageMin = 1000,
 	damageMax = 1500,
-	baseXp = 20000,
+	baseXp = 24310,
 	baseHAM = 501000,
 	baseHAMmax = 501000,
 	armor = 3,
@@ -33,14 +33,14 @@ escaped_rancor = Creature:new {
 			groups = {
 				{group = "rancor_common", chance = 10000000},
 			},
-			lootChance = 10000000
+			lootChance = 5200000
 		},
 		{	
 			groups = {
 				{group = "armor_attachments", chance = 5000000},
 				{group = "clothing_attachments", chance = 5000000},
 			},
-			lootChance = 10000000
+			lootChance = 3900000
 		},
 		{
 			groups = {
@@ -52,13 +52,13 @@ escaped_rancor = Creature:new {
 			groups = {
 				{group = "named_crystals", chance = 10000000},
 			},
-			lootChance = 10000000
+			lootChance = 3900000
 		},
 		{
 			groups = {
 				{group = "power_crystals", chance = 10000000},
 			},
-			lootChance = 10000000
+			lootChance = 3900000
 		},
 	},
 	weapons = {},

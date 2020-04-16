@@ -30,14 +30,28 @@ canyon_krayt_dragon = Creature:new {
 	scale = 0.9;
 	lootGroups = {
 		{
+		-- Tier One
 	        groups = {
-				{group = "krayt_dragon_common", chance = 3500000},
-				{group = "krayt_tissue_uncommon", chance = 2500000},
-				{group = "armor_all", chance = 2000000},
-				{group = "weapons_all", chance = 2000000},
+				{group = "krayt_tissue_rare", chance = 5000000},
+				{group = "krayt_pearls", chance = 5000000},
 			},
-			lootChance = 6500000
-		}
+			lootChance = 3300000
+		},
+		{
+		-- Tier Two
+	        groups = {
+				{group = "krayt_dragon_uncommon", chance = 10000000},
+			},
+			lootChance = 4800000
+		},
+		-- Tier Three
+		{
+	        groups = {
+				
+				{group = "krayt_dragon_common2", chance = 10000000},
+			},
+			lootChance = 6200000
+		},
 	},
 	weapons = {},
 	conversationTemplate = "",

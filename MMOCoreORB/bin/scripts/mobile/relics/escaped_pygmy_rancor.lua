@@ -2,11 +2,11 @@ escaped_pygmy_rancor = Creature:new {
 	customName = "Escaped Pygmy Rancor",
 	socialGroup = "rancor",
 	faction = "",
-	level = 100,
+	level = 177,
 	chanceHit = 7.5,
 	damageMin = 500,
 	damageMax = 750,
-	baseXp = 10000,
+	baseXp = 17725,
 	baseHAM = 250000,
 	baseHAMmax = 250000,
 	armor = 3,
@@ -33,33 +33,33 @@ escaped_pygmy_rancor = Creature:new {
 			groups = {
 				{group = "rancor_common", chance = 10000000},
 			},
-			lootChance = 5000000
+			lootChance = 3800000
 		},
 		{	
 			groups = {
 				{group = "armor_attachments", chance = 5000000},
 				{group = "clothing_attachments", chance = 5000000},
 			},
-			lootChance = 5000000
+			lootChance = 2900000
 		},
 		
 		{
 			groups = {
 				{group = "relics_paintings", chance = 10000000},
 			},
-			lootChance = 5000000
+			lootChance = 8500000
 		},
 		{
 			groups = {
 				{group = "named_crystals", chance = 10000000},
 			},
-			lootChance = 5000000
+			lootChance = 2900000
 		},
 		{
 			groups = {
 				{group = "power_crystals", chance = 10000000},
 			},
-			lootChance = 5000000
+			lootChance = 2900000
 		},
 	},
 	weapons = {},
