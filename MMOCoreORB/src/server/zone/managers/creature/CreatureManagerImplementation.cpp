@@ -673,10 +673,18 @@ void CreatureManagerImplementation::droidHarvest(Creature* creature, CreatureObj
 		owner->sendSystemMessage("Tried to harvest something this creature didn't have, please report this error");
 		return;
 	}
+	
+	//Let's make sure we give AT LEAST 10 units.
+	quantity = Math::max(quantity, 10.0f);
+	
 	int ownerSkill = owner->getSkillMod("creature_harvesting");
 	int quantityExtracted = int(quantity * float(ownerSkill / 100.0f));
 	// add in droid bonus
-	quantityExtracted = Math::max(quantityExtracted, 3);
+	
+	//A low harvest skill WILL reduce the base value below 10, so we will ensure it is at least 10 again.
+	quantityExtracted = Math::max(quantityExtracted, 10);
+	
+	
 	ManagedReference<ResourceSpawn*> resourceSpawn = resourceManager->getCurrentSpawn(restype, droid->getZone()->getZoneName());
 
 	if (resourceSpawn == nullptr) {
@@ -689,16 +697,17 @@ void CreatureManagerImplementation::droidHarvest(Creature* creature, CreatureObj
 	String creatureHealth = "";
 
 	if (density > 0.75f) {
-		quantityExtracted = int(quantityExtracted * 1.25f);
+		quantityExtracted = int(quantityExtracted * 1.35f);
 		creatureHealth = "creature_quality_fat";
 	} else if (density > 0.50f) {
-		quantityExtracted = int(quantityExtracted * 1.00f);
+		quantityExtracted = int(quantityExtracted * 1.25f);
 		creatureHealth = "creature_quality_medium";
 	} else if (density > 0.25f) {
-		quantityExtracted = int(quantityExtracted * 0.75f);
+		quantityExtracted = int(quantityExtracted * 1.00f);
 		creatureHealth = "creature_quality_scrawny";
 	} else {
-		quantityExtracted = int(quantityExtracted * 0.50f);
+		//This value could lower resources below 15. Change to prevent that.
+		quantityExtracted = Math::max(int(quantityExtracted * 0.85f), 10);
 		creatureHealth = "creature_quality_skinny";
 	}
 
@@ -839,8 +848,15 @@ void CreatureManagerImplementation::harvest(Creature* creature, CreatureObject* 
 		player->sendSystemMessage("Tried to harvest something this creature didn't have, please report this error");
 		return;
 	}
+	
+	//Let's make sure we give AT LEAST 10 units.
+	quantity = Math::max(quantity, 10.0f);
+	
+	
 	int quantityExtracted = int(quantity * float(player->getSkillMod("creature_harvesting") / 100.0f));
-	quantityExtracted = Math::max(quantityExtracted, 3);
+	
+	//A low harvest skill WILL reduce the base value below 15, so we will ensure it is at least 15 again.
+	quantityExtracted = Math::max(quantityExtracted, 10);
 
 	ManagedReference<ResourceSpawn*> resourceSpawn = resourceManager->getCurrentSpawn(restype, player->getZone()->getZoneName());
 
@@ -854,16 +870,17 @@ void CreatureManagerImplementation::harvest(Creature* creature, CreatureObject* 
 	String creatureHealth = "";
 
 	if (density > 0.75f) {
-		quantityExtracted = int(quantityExtracted * 1.25f);
+		quantityExtracted = int(quantityExtracted * 1.35f);
 		creatureHealth = "creature_quality_fat";
 	} else if (density > 0.50f) {
-		quantityExtracted = int(quantityExtracted * 1.00f);
+		quantityExtracted = int(quantityExtracted * 1.25f);
 		creatureHealth = "creature_quality_medium";
 	} else if (density > 0.25f) {
-		quantityExtracted = int(quantityExtracted * 0.75f);
+		quantityExtracted = int(quantityExtracted * 1.00f);
 		creatureHealth = "creature_quality_scrawny";
 	} else {
-		quantityExtracted = int(quantityExtracted * 0.50f);
+		//This value could lower resources below 15. Change to prevent that.
+		quantityExtracted = Math::max(int(quantityExtracted * 0.85f), 10);
 		creatureHealth = "creature_quality_skinny";
 	}
 
