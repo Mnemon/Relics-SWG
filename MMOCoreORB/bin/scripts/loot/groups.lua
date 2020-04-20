@@ -372,3 +372,4 @@ includeFile("groups/wearables/wearables_uncommon.lua")
 -- Relics Additions
 includeFile("groups/relics_paintings.lua")
 includeFile("groups/named_crystals.lua")
+includeFile("groups/architect_satchel.lua")
