@@ -30,12 +30,14 @@ escaped_rancor = Creature:new {
 	scale = 2.1,
 	lootGroups = {
 		{
+		-- Tier 3
 			groups = {
 				{group = "rancor_common", chance = 10000000},
 			},
 			lootChance = 5200000
 		},
-		{	
+		{
+		-- Tier 2
 			groups = {
 				{group = "armor_attachments", chance = 5000000},
 				{group = "clothing_attachments", chance = 5000000},
@@ -43,18 +45,21 @@ escaped_rancor = Creature:new {
 			lootChance = 3900000
 		},
 		{
+		-- Tier 5
 			groups = {
 				{group = "relics_paintings", chance = 10000000},
 			},
 			lootChance = 10000000
 		},
 		{
+		-- Tier 2
 			groups = {
 				{group = "named_crystals", chance = 10000000},
 			},
 			lootChance = 3900000
 		},
 		{
+		-- Tier 2
 			groups = {
 				{group = "power_crystals", chance = 10000000},
 			},

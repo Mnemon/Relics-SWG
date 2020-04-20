@@ -30,32 +30,36 @@ escaped_pygmy_rancor = Creature:new {
 	scale = 0.4,
 	lootGroups = {
 		{
+		-- Tier 3
 			groups = {
 				{group = "rancor_common", chance = 10000000},
 			},
 			lootChance = 3800000
 		},
-		{	
+		{
+		-- Tier 2
 			groups = {
 				{group = "armor_attachments", chance = 5000000},
 				{group = "clothing_attachments", chance = 5000000},
 			},
 			lootChance = 2900000
 		},
-		
 		{
+		-- Tier 5
 			groups = {
-				{group = "relics_paintings", chance = 10000000},
+				{group = "junk", chance = 10000000},
 			},
-			lootChance = 8500000
+			lootChance = 10000000
 		},
 		{
+		-- Tier 2
 			groups = {
-				{group = "named_crystals", chance = 10000000},
+				{group = "color_crystals", chance = 10000000},
 			},
-			lootChance = 2900000
+			lootChance = 4200000
 		},
 		{
+		--Tier 2
 			groups = {
 				{group = "power_crystals", chance = 10000000},
 			},

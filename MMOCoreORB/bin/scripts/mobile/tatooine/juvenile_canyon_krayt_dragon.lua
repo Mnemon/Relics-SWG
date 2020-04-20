@@ -36,14 +36,14 @@ juvenile_canyon_krayt_dragon = Creature:new {
 				{group = "krayt_tissue_rare", chance = 5000000},
 				{group = "krayt_pearls", chance = 5000000},
 			},
-			lootChance = 800000
+			lootChance = 1400000
 		},
 		{
 		-- Tier Two
 	        groups = {
-				{group = "krayt_dragon_uncommon", chance = 10000000},
+				{group = "krayt_tissue_uncommon", chance = 10000000},
 			},
-			lootChance = 1500000
+			lootChance = 2000000
 		},
 		-- Tier Three
 		{
@@ -51,7 +51,23 @@ juvenile_canyon_krayt_dragon = Creature:new {
 				
 				{group = "krayt_dragon_common2", chance = 10000000},
 			},
-			lootChance = 2300000
+			lootChance = 2600000
+		},
+		-- Tier Four
+		{
+	        groups = {
+				
+				{group = "color_crystals", chance = 10000000},
+			},
+			lootChance = 2900000
+		},
+		-- Tier Five
+		{
+	        groups = {
+				
+				{group = "junk", chance = 10000000},
+			},
+			lootChance = 10000000
 		},
 	},
 	weapons = {},
