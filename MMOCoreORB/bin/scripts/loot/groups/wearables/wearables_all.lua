@@ -3,134 +3,9 @@ wearables_all = {
 	minimumLevel = 0,
 	maximumLevel = 0,
 	lootItems = {
-		-- Common
-		{itemTemplate = "bandolier_s07", weight = 54125}, -- Shoulder Strap
-		{itemTemplate = "bandolier_s08", weight = 54125}, -- Dark Sash
-		{itemTemplate = "belt_s07", weight = 54125}, -- Multipocket Belt
-		{itemTemplate = "belt_s11", weight = 54125}, -- Two Pocket Belt
-		{itemTemplate = "boots_s03", weight = 54125}, -- Wrapped Boots
-		{itemTemplate = "boots_s04", weight = 54125}, -- Hide Boots
-		{itemTemplate = "dress_s06", weight = 54125}, -- Maiden's Dress
-		{itemTemplate = "dress_s10", weight = 54125}, -- Plain Robe
-		{itemTemplate = "dress_s12", weight = 54124}, -- Plain Short Robe
-		{itemTemplate = "dress_s18", weight = 54124}, -- Administrator's Robe
-		{itemTemplate = "dress_s26", weight = 54124}, -- Frock
-		{itemTemplate = "gloves_s12", weight = 54124}, -- Leather Gloves
-		{itemTemplate = "hat_s14", weight = 54124}, -- Headwrap
-		{itemTemplate = "ith_pants_s01", weight = 54124}, -- Ithorian Striped Pants
-		{itemTemplate = "ith_pants_s04", weight = 54124}, -- Ithorian Reinforced Trousers
-		{itemTemplate = "ith_pants_s17", weight = 54124}, -- Ithorian Striped Shorts
-		{itemTemplate = "ith_shirt_s01", weight = 54124}, -- Ithorian Long Sweater
-		{itemTemplate = "ith_shirt_s06", weight = 54124}, -- Ithorian Two Pocket Shirt
-		{itemTemplate = "ith_shirt_s07", weight = 54124}, -- Ithorian Striped Shirt
-		{itemTemplate = "ith_vest_s01", weight = 54124}, -- Ithorian Lifejacket
-		{itemTemplate = "jacket_s02", weight = 54124}, -- Shortsleeve Jacket
-		{itemTemplate = "jacket_s12", weight = 54124}, -- Casual Jacket
-		{itemTemplate = "jacket_s15", weight = 54124}, -- Labour Jacket
-		{itemTemplate = "pants_s04", weight = 54124}, -- Pocketed Work Pants
-		{itemTemplate = "pants_s10", weight = 54124}, -- Wrinkled Pants
-		{itemTemplate = "pants_s12", weight = 54124}, -- Work Slacks
-		{itemTemplate = "pants_s17", weight = 54124}, -- Shorts
-		{itemTemplate = "pants_s25", weight = 54124}, -- Casual Pants
-		{itemTemplate = "shirt_s04", weight = 54124}, -- Simple Shirt
-		{itemTemplate = "shirt_s27", weight = 54124}, -- Shortsleeve Shirt
-		{itemTemplate = "shirt_s34", weight = 54124}, -- Soft Undershirt
-		{itemTemplate = "shoes_s02", weight = 54124}, -- Casual Shoes
-		{itemTemplate = "skirt_s10", weight = 54124}, -- Wrapped Skirt
-		{itemTemplate = "wke_gloves_s02", weight = 54124}, -- Wookiee Arm Wraps
-		{itemTemplate = "wke_hood_s01", weight = 54124}, -- Tree-Dweller's Hood
-		{itemTemplate = "wke_hood_s03", weight = 54124}, -- Weighted Wookiee Hood
-		{itemTemplate = "wke_shirt_s01", weight = 54124}, -- Wookiee Hide Jerkin
-		{itemTemplate = "wke_shirt_s02", weight = 54124}, -- Weighted Wookiee Pullover
-		{itemTemplate = "wke_skirt_s04", weight = 54124}, -- Simple Waist Wrap
+		{groupTemplate = "junk", weight = 5560404},
 
-		-- Uncommon
-		{itemTemplate = "belt_s04", weight = 40596}, -- Workman's Belt
-		{itemTemplate = "belt_s09", weight = 40596}, -- Utility Belt
-		{itemTemplate = "belt_s15", weight = 40596}, -- Strap Belt
-		{itemTemplate = "belt_s16", weight = 40596}, -- Leather Belt
-		{itemTemplate = "belt_s18", weight = 40596}, -- Bristle Hide Belt
-		{itemTemplate = "boots_s05", weight = 40596}, -- Sturdy Boots
-		{itemTemplate = "boots_s14", weight = 40596}, -- Uniform Boots
-		{itemTemplate = "boots_s15", weight = 40596}, -- Standard Boots
-		{itemTemplate = "boots_s21", weight = 40596}, -- Paneled Boots
-		{itemTemplate = "boots_s34", weight = 40596}, -- Snow Boots
-		{itemTemplate = "bracelet_s05_l", weight = 40596}, -- Bangles
-		{itemTemplate = "bracelet_s05_r", weight = 40596}, -- Bangles
-		{itemTemplate = "bracelet_s06_l", weight = 40596}, -- Metal Bracelet
-		{itemTemplate = "bracelet_s06_r", weight = 40596}, -- Metal Bracelet
-		{itemTemplate = "dress_s09", weight = 40596}, -- Loose Dress
-		{itemTemplate = "dress_s13", weight = 40596}, -- Smock
-		{itemTemplate = "dress_s23", weight = 40596}, -- Councilman's Robe
-		{itemTemplate = "dress_s29", weight = 40596}, -- Sleeveless Dress
-		{itemTemplate = "gloves_s02", weight = 40596}, -- Leather Work Gloves
-		{itemTemplate = "gloves_s03", weight = 40596}, -- Cold Weather Gloves
-		{itemTemplate = "gloves_s06", weight = 40596}, -- Tipless Gloves
-		{itemTemplate = "gloves_s07", weight = 40596}, -- Long Leather Gloves
-		{itemTemplate = "hat_s04", weight = 40596}, -- Swoop Helm
-		{itemTemplate = "ith_dress_s03", weight = 40596}, -- Ithorian Elder's Dress
-		{itemTemplate = "ith_gloves_s02", weight = 40596}, -- Ithorian Leather Work Gloves
-		{itemTemplate = "ith_hat_s01", weight = 40596}, -- Ithorian Newsboy
-		{itemTemplate = "ith_jacket_s01", weight = 40596}, -- Ithorian Block Panel Jacket
-		{itemTemplate = "ith_jacket_s02", weight = 40596}, -- Ithorian Cargo Jacket
-		{itemTemplate = "ith_jacket_s03", weight = 40596}, -- Ithorian Frilled Jacket
-		{itemTemplate = "ith_jacket_s08", weight = 40596}, -- Ithorian Tech Jacket
-		{itemTemplate = "ith_necklace_s01", weight = 40596}, -- Ithorian Plated Necklace
-		{itemTemplate = "ith_necklace_s03", weight = 40596}, -- Ithorian Crested Neckpiece
-		{itemTemplate = "ith_necklace_s06", weight = 40596}, -- Ithorian Metal Necklace
-		{itemTemplate = "ith_necklace_s07", weight = 40596}, -- Ithorian Emerald Pendant
-		{itemTemplate = "ith_necklace_s08", weight = 40596}, -- Ithorian Large Pendant
-		{itemTemplate = "ith_necklace_s11", weight = 40596}, -- Ithorian Striped Pendant
-		{itemTemplate = "ith_pants_s02", weight = 40596}, -- Ithorian Three Striped Pants
-		{itemTemplate = "ith_pants_s03", weight = 40596}, -- Ithorian Twin Striped Pants
-		{itemTemplate = "ith_pants_s05", weight = 40596}, -- Ithorian Camos
-		{itemTemplate = "ith_pants_s06", weight = 40596}, -- Ithorian Patrol Pants
-		{itemTemplate = "ith_shirt_s02", weight = 40596}, -- Ithorian Frilly Shirt
-		{itemTemplate = "ith_shirt_s04", weight = 40596}, -- Ithorian Half Sweater
-		{itemTemplate = "ith_shirt_s08", weight = 40596}, -- Ithorian Two Tone Shirt
-		{itemTemplate = "ith_shirt_s12", weight = 40596}, -- Ithorian Tight Fit Shirt
-		{itemTemplate = "ith_skirt_s01", weight = 40596}, -- Ithorian Striped Skirt
-		{itemTemplate = "jacket_s05", weight = 40596}, -- Padded Jacket
-		{itemTemplate = "jacket_s08", weight = 40596}, -- Rugged Jacket
-		{itemTemplate = "jacket_s13", weight = 40596}, -- Reinforced Jacket
-		{itemTemplate = "jacket_s14", weight = 40596}, -- Wooly Jacket
-		{itemTemplate = "jacket_s16", weight = 40596}, -- Cold Weather Jacket
-		{itemTemplate = "necklace_s01", weight = 40596}, -- Plated Necklace
-		{itemTemplate = "necklace_s03", weight = 40596}, -- Crested Neckpiece
-		{itemTemplate = "necklace_s06", weight = 40596}, -- Metal Necklace
-		{itemTemplate = "necklace_s07", weight = 40596}, -- Emerald Pendant
-		{itemTemplate = "necklace_s08", weight = 40596}, -- Large Pendant
-		{itemTemplate = "necklace_s11", weight = 40596}, -- Striped Pendant
-		{itemTemplate = "pants_s01", weight = 40596}, -- Striped Pants
-		{itemTemplate = "pants_s05", weight = 40596}, -- Thin Striped Pants
-		{itemTemplate = "pants_s06", weight = 40596}, -- Ribbed Pants
-		{itemTemplate = "pants_s14", weight = 40596}, -- Large Pocket Pants
-		{itemTemplate = "shirt_s03", weight = 40596}, -- Plain Shirt
-		{itemTemplate = "shirt_s05", weight = 40596}, -- Dress Shirt
-		{itemTemplate = "shirt_s07", weight = 40596}, -- Casual Shirt
-		{itemTemplate = "shirt_s08", weight = 40596}, -- Sidebuttoned Shirt
-		{itemTemplate = "shirt_s09", weight = 40596}, -- Ribbed Shirt
-		{itemTemplate = "shirt_s13", weight = 40596}, -- Formal Shirt
-		{itemTemplate = "shirt_s28", weight = 40596}, -- Dress Blouse
-		{itemTemplate = "shoes_s01", weight = 40596}, -- Dress Shoes
-		{itemTemplate = "shoes_s03", weight = 40596}, -- Sneakers
-		{itemTemplate = "shoes_s07", weight = 40596}, -- Sandals
-		{itemTemplate = "shoes_s08", weight = 40596}, -- Women's Shoes
-		{itemTemplate = "shoes_s09", weight = 40596}, -- Dress Slippers
-		{itemTemplate = "skirt_s04", weight = 40596}, -- Pleated Skirt
-		{itemTemplate = "skirt_s05", weight = 40596}, -- Modest Skirt
-		{itemTemplate = "skirt_s06", weight = 40596}, -- Belted Skirt
-		{itemTemplate = "skirt_s07", weight = 40596}, -- Fashionably Pleated Skirt
-		{itemTemplate = "skirt_s14", weight = 40596}, -- Two-Tone Formal Skirt
-		{itemTemplate = "vest_s06", weight = 40596}, -- Padded Pullover
-		{itemTemplate = "vest_s09", weight = 40596}, -- Cargo Vest
-		{itemTemplate = "wke_gloves_s01", weight = 40596}, -- Patterned Wookiee Gloves
-		{itemTemplate = "wke_gloves_s04", weight = 40596}, -- Wookiee Strapped Gloves
-		{itemTemplate = "wke_hat_s01", weight = 40596}, -- Wookiee Traveller's Helm
-		{itemTemplate = "wke_skirt_s02", weight = 40596}, -- Sigiled Waist Wrap
-		{itemTemplate = "wke_skirt_s03", weight = 40596}, -- Weighted Waist Wrap
-
-		-- Rare
+		-- Rare - 33.29972
 		{itemTemplate = "bandolier_s02", weight = 27064}, -- Mercenary Bandolier
 		{itemTemplate = "bandolier_s03", weight = 27064}, -- Two-Strap Bandolier
 		{itemTemplate = "bandolier_s04", weight = 27064}, -- Multipocket Bandolier
@@ -256,7 +131,7 @@ wearables_all = {
 		{itemTemplate = "wke_shoulder_pad_s02", weight = 27064}, -- Crested Battle Padding
 		{itemTemplate = "wke_skirt_s01", weight = 27064}, -- Decorative Waist Wrap
 
-		-- Scarce
+		-- Scarce 11.09624
 		{itemTemplate = "apron_chef_s01", weight = 13532}, -- Chef's Apron
 		{itemTemplate = "belt_s03", weight = 13532}, -- Cartridge Belt
 		{itemTemplate = "belt_s05", weight = 13532}, -- Grenadier's Belt
