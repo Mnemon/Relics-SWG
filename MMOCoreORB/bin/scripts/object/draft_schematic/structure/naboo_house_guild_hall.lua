@@ -67,7 +67,7 @@ object_draft_schematic_structure_naboo_house_guild_hall = object_draft_schematic
 	ingredientTitleNames = {"load_bearing_structure_and_shell", "insulation_and_covering", "foundation", "wall_sections", "power_supply_unit", "storage_space"},
 	ingredientSlotType = {0, 0, 0, 2, 1, 1},
 	resourceTypes = {"metal", "ore", "ore", "object/tangible/component/structure/shared_wall_module.iff", "object/tangible/component/structure/shared_power_core_unit.iff", "object/tangible/component/structure/shared_structure_storage_section.iff"},
-	resourceQuantities = {1250, 2250, 400, 15, 2, 8},
+	resourceQuantities = {625, 1125, 200, 15, 2, 8},
 	contribution = {100, 100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/deed/guild_deed/naboo_guild_deed.iff",

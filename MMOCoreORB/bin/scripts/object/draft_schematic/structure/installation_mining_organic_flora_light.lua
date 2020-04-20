@@ -67,7 +67,7 @@ object_draft_schematic_structure_installation_mining_organic_flora_light = objec
 	ingredientTitleNames = {"load_bearing_frame", "body_shell_and_casing", "structure_foundation", "plant_handling_mechanism", "bio_storage_tank"},
 	ingredientSlotType = {0, 0, 0, 0, 0},
 	resourceTypes = {"metal", "steel", "ore", "metal_nonferrous", "aluminum"},
-	resourceQuantities = {110, 60, 50, 15, 15},
+	resourceQuantities = {55, 30, 25, 15, 15},
 	contribution = {100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/deed/harvester_deed/harvester_flora_deed.iff",

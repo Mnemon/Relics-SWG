@@ -67,7 +67,7 @@ object_draft_schematic_structure_merchant_tent = object_draft_schematic_structur
 	ingredientTitleNames = {"tent_frame", "insulation_and_covering", "foundation", "fiberplast_tent_covering", "reinforced_secondary_covering"},
 	ingredientSlotType = {0, 0, 0, 2, 1},
 	resourceTypes = {"metal", "hide", "ore", "object/tangible/component/clothing/shared_fiberplast_panel.iff", "object/tangible/component/clothing/shared_reinforced_fiber_panels.iff"},
-	resourceQuantities = {400, 600, 200, 20, 4},
+	resourceQuantities = {200, 300, 100, 20, 4},
 	contribution = {100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/deed/player_house_deed/merchant_tent_style_01_deed.iff",
