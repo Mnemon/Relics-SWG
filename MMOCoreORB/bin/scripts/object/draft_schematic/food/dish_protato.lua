@@ -49,7 +49,8 @@ object_draft_schematic_food_dish_protato = object_draft_schematic_food_shared_di
 
    craftingToolTab = 4, -- (See DraftSchematicObjectTemplate.h)
    complexity = 6, 
-   size = 1, 
+   size = 1,
+   factoryCrateSize = 1000,
 
    xpType = "crafting_food_general", 
    xp = 100, 
