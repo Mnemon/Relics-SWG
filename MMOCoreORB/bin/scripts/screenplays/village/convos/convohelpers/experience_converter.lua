@@ -21,8 +21,8 @@ ExperienceConverter = ScreenPlay:new {
 			{ "combat_rangedspecialize_heavy", 30 },
 			{ "combat_rangedspecialize_pistol", 30 },
 			{ "combat_rangedspecialize_rifle", 30 },
-			{ "squadleader", 90 }
-			{ "jedi_general", 30 }
+			{ "squadleader", 90 },
+			{ "jedi_general", 30 },
 		},
 		senses = {
 			{ "bio_engineer_dna_harvesting", 3 },
@@ -51,8 +51,8 @@ ExperienceConverter = ScreenPlay:new {
 			{ "combat_rangedspecialize_heavy", 30 },
 			{ "combat_rangedspecialize_pistol", 30 },
 			{ "combat_rangedspecialize_rifle", 30 },
-			{ "squadleader", 90 }
-			{ "jedi_general", 30 }
+			{ "squadleader", 90 },
+			{ "jedi_general", 30 },
 		},
 		crafting = {
 			{ "crafting_bio_engineer_creature", 4 },
@@ -64,7 +64,7 @@ ExperienceConverter = ScreenPlay:new {
 			{ "crafting_medicine_general", 5 },
 			{ "crafting_spice", 5 },
 			{ "crafting_structure_general", 35 },
-			{ "crafting_weapons_general", 5 }
+			{ "crafting_weapons_general", 5 },
 		}
 	}
 }
