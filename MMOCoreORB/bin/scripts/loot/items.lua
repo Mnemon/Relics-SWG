@@ -1295,6 +1295,7 @@ includeFile("items/veteran_rewards/vet_painting_06.lua")
 includeFile("items/veteran_rewards/vet_painting_07.lua")
 includeFile("items/veteran_rewards/vet_painting_08.lua")
 includeFile("items/veteran_rewards/vet_painting_09.lua")
+includeFile("items/veteran_rewards/vet_resource_deed.lua")
 
 -- Architect Items
 includeFile("items/deeds/city_hall_deed_corellia.lua")
@@ -1316,3 +1317,13 @@ includeFile("items/deeds/naboo_house_small_deed.lua")
 includeFile("items/deeds/naboo_house_small_style_02_deed.lua")
 includeFile("items/deeds/tatooine_house_small_deed.lua")
 includeFile("items/deeds/tatooine_house_small_style_02_deed.lua")
+
+-- Goggles
+includeFile("items/goggles/goggles_s01.lua")
+includeFile("items/goggles/goggles_s02.lua")
+includeFile("items/goggles/goggles_s03.lua")
+includeFile("items/goggles/goggles_s04.lua")
+includeFile("items/goggles/goggles_s05.lua")
+includeFile("items/goggles/goggles_s06.lua")
+
+-- Relics Custom
