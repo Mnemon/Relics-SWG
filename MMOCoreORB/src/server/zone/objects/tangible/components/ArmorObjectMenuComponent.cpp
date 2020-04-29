@@ -39,8 +39,9 @@ void ArmorObjectMenuComponent::fillObjectMenuResponse(SceneObject* sceneObject, 
 			return;
 	}
 
-	String text = "Color Change";
-	menuResponse->addRadialMenuItem(81, 3, text);
+	if (!parent->isPlayerCreature()) {
+				menuResponse->addRadialMenuItem(81, 3, "Modify Color");	
+		}
 	
     WearableObjectMenuComponent::fillObjectMenuResponse(sceneObject, menuResponse, player); 	
 }
@@ -84,18 +85,26 @@ int ArmorObjectMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject, C
 		VectorMap<String, Reference<CustomizationVariable*> > variables;
 		AssetCustomizationManagerTemplate::instance()->getCustomizationVariables(appearanceFilename.hashCode(), variables, false);
 
-		// The Sui Box.
-		ManagedReference<SuiColorBox*> cbox = new SuiColorBox(player, SuiWindowType::COLOR_ARMOR);
-		cbox->setCallback(new ColorArmorSuiCallback(server));
-		cbox->setColorPalette(variables.elementAt(1).getKey()); // First one seems to be the frame of it? Skip to 2nd.
-		cbox->setUsingObject(sceneObject);
+		for(int i = 0; i < variables.size(); i++)
+		{
+			String varkey = variables.elementAt(i).getKey();
+				if (varkey.contains("color")) 
+				{
+					
+					// The Sui Box.
+					ManagedReference<SuiColorBox*> cbox = new SuiColorBox(player, SuiWindowType::COLOR_ARMOR);
+					cbox->setCallback(new ColorArmorSuiCallback(server));
+					cbox->setColorPalette(variables.elementAt(i).getKey()); // First one seems to be the frame of it? Skip to 2nd.
+					cbox->setUsingObject(sceneObject);
 
-		// Add to player.
-		ManagedReference<PlayerObject*> ghost = player->getPlayerObject();
-		ghost->addSuiBox(cbox);
-		player->sendMessage(cbox->generateMessage());
+					// Add to player.
+					ManagedReference<PlayerObject*> ghost = player->getPlayerObject();
+					ghost->addSuiBox(cbox);
+					player->sendMessage(cbox->generateMessage());
+					
+				}
 		}
-
+		}
 	}
 	
 	return WearableObjectMenuComponent::handleObjectMenuSelect(sceneObject, player, selectedID);
