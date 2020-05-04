@@ -302,7 +302,8 @@ naboo = {
 		{name = "Moenia South", x = 4961.9409, z = 3.75, y = -4892.6997, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 		{name = "Dee'ja Peak", x = 5331.9375, z = 327.02765, y = -1576.6733, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 		{name = "Kaadara", x = 5207.87, z = -192, y = 6678.07, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
-		{name = "Kaadara West", x = 5123.3857, z = -192, y = 6616.0264, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1}
+		{name = "Kaadara West", x = 5123.3857, z = -192, y = 6616.0264, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
+		{name = "Battlefield Naboo", x = -1984.80, z = -196.98, y = 6228.81, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 		
 	},
 
@@ -516,7 +517,7 @@ tatooine = {
 	planetTravelPoints = {
 		{name = "Mos Eisley West", x = 3416.6914, z = 5, y = -4648.1411, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 		{name = "Mos Eisley", x = 3529.19, z = 5, y = -4803.98, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
-		{name = "Bestine", x = -286.51, z = 12, y = -3591.36, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
+		{name = "Bestine", x = -1286.51, z = 12, y = -3591.36, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 		{name = "Bestine East", x = -1098.4836, z = 12, y = -3563.5342, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 		{name = "Mos Espa South", x = -2897.0933, z = 5, y = 1933.4144, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 		{name = "Mos Espa West", x = -3112.1296, z = 5, y = 2176.9607, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
