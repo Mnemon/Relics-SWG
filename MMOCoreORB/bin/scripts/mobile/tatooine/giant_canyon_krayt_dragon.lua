@@ -2,7 +2,7 @@ giant_canyon_krayt_dragon = Creature:new {
 	objectName = "@mob/creature_names:giant_canyon_krayt_dragon",
 	socialGroup = "krayt",
 	faction = "",
-	level = 300,
+	level = 341,
 	chanceHit = 30.0,
 	damageMin = 1645,
 	damageMax = 3000,
@@ -36,14 +36,14 @@ giant_canyon_krayt_dragon = Creature:new {
 				{group = "krayt_tissue_rare", chance = 5000000},
 				{group = "krayt_pearls", chance = 5000000},
 			},
-			lootChance = 3500000
+			lootChance = 2980688
 		},
 		{
 		-- Tier Two
 	        groups = {
 				{group = "krayt_tissue_uncommon", chance = 10000000},
 			},
-			lootChance = 5100000
+			lootChance = 4683938
 		},
 		-- Tier Three
 		{
@@ -51,7 +51,7 @@ giant_canyon_krayt_dragon = Creature:new {
 				
 				{group = "krayt_dragon_common2", chance = 10000000},
 			},
-			lootChance = 6700000
+			lootChance = 6387188
 		},
 		-- Tier Four
 		{
@@ -59,7 +59,7 @@ giant_canyon_krayt_dragon = Creature:new {
 				
 				{group = "color_crystals", chance = 10000000},
 			},
-			lootChance = 7500000
+			lootChance = 8090438
 		},
 		-- Tier Five
 		{

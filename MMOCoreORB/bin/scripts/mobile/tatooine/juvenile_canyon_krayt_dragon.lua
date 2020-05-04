@@ -2,11 +2,11 @@ juvenile_canyon_krayt_dragon = Creature:new {
 	objectName = "@mob/creature_names:juvenile_canyon_krayt",
 	socialGroup = "krayt",
 	faction = "",
-	level = 122,
+	level = 113,
 	chanceHit = 4.0,
 	damageMin = 745,
 	damageMax = 1200,
-	baseXp = 11577,
+	baseXp = 11311,
 	baseHAM = 54000,
 	baseHAMmax = 64000,
 	armor = 2,
@@ -36,14 +36,14 @@ juvenile_canyon_krayt_dragon = Creature:new {
 				{group = "krayt_tissue_rare", chance = 5000000},
 				{group = "krayt_pearls", chance = 5000000},
 			},
-			lootChance = 1400000
+			lootChance = 991484
 		},
 		{
 		-- Tier Two
 	        groups = {
 				{group = "krayt_tissue_uncommon", chance = 10000000},
 			},
-			lootChance = 2000000
+			lootChance = 1558047
 		},
 		-- Tier Three
 		{
@@ -51,7 +51,7 @@ juvenile_canyon_krayt_dragon = Creature:new {
 				
 				{group = "krayt_dragon_common2", chance = 10000000},
 			},
-			lootChance = 2600000
+			lootChance = 2124609
 		},
 		-- Tier Four
 		{
@@ -59,7 +59,7 @@ juvenile_canyon_krayt_dragon = Creature:new {
 				
 				{group = "color_crystals", chance = 10000000},
 			},
-			lootChance = 2900000
+			lootChance = 2691172
 		},
 		-- Tier Five
 		{

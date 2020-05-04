@@ -35,14 +35,14 @@ krayt_dragon_adolescent = Creature:new {
 				{group = "krayt_tissue_rare", chance = 5000000},
 				{group = "krayt_pearls", chance = 5000000},
 			},
-			lootChance = 3800000
+			lootChance = 2980688
 		},
 		{
 		-- Tier Two
 	        groups = {
 				{group = "krayt_tissue_uncommon", chance = 10000000},
 			},
-			lootChance = 5500000
+			lootChance = 4683938
 		},
 		-- Tier Three
 		{
@@ -50,7 +50,7 @@ krayt_dragon_adolescent = Creature:new {
 				
 				{group = "krayt_dragon_common2", chance = 10000000},
 			},
-			lootChance = 7100000
+			lootChance = 6387188
 		},
 		-- Tier Four
 		{
@@ -58,7 +58,7 @@ krayt_dragon_adolescent = Creature:new {
 				
 				{group = "color_crystals", chance = 10000000},
 			},
-			lootChance = 8000000
+			lootChance = 8090438
 		},
 		-- Tier Five
 		{
