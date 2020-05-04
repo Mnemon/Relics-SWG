@@ -73,6 +73,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 		"Character Options",
 		{
 			"Politician", "social_politician_master",
+			"Shipwright", "crafting_shipwright_master",
 			"Unlock Jedi Initiate", "unlock_jedi_initiate",
 			"Unlearn All Skills", "unlearn_all_skills",
 		},
