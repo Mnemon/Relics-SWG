@@ -15,8 +15,8 @@ end
 
 function CityPerksPlay:spawnSceneObjects()
 
-	spawnSceneObject("tatooine", "object/tangible/event_perk/jawas_and_droids.iff", 2514, 0, 4212, 0, 1, 0, 0, 0) -- Twin Suns perk
-	
+	spawnSceneObject("tatooine", "object/tangible/event_perk/jawas_and_droids.iff", 2514, 0, 4212, 0, 1 ) -- Twin Suns perk
+	spawnSceneObject("tatooine", "object/building/tatooine/capitol_tatooine.iff", 2675, 0, 4196, 0, math.rad(-90) ) -- Twin Suns Capitol
 	
 end
 
