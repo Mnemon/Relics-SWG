@@ -1,4 +1,18 @@
 includeFile("relics/escaped_pygmy_rancor.lua")
 includeFile("relics/escaped_rancor.lua")
+includeFile("relics/greater_krayt_dragon.lua")
 --includeFile("relics/mutant_leviasquall.lua")
 
+-- Battlefield NPCs
+includeFile("relics/battlefield/battlefield_imperial_assault_trooper.lua")
+includeFile("relics/battlefield/battlefield_imperial_elite_dark_trooper.lua")
+includeFile("relics/battlefield/battlefield_imperial_guard.lua")
+includeFile("relics/battlefield/battlefield_imperial_storm_captain.lua")
+includeFile("relics/battlefield/battlefield_imperial_storm_sniper.lua")
+includeFile("relics/battlefield/battlefield_imperial_stormtrooper.lua")
+includeFile("relics/battlefield/battlefield_rebel_guard.lua")
+includeFile("relics/battlefield/battlefield_rebel_commando.lua")
+includeFile("relics/battlefield/battlefield_rebel_elite_heavy_trooper.lua")
+includeFile("relics/battlefield/battlefield_rebel_sharpshooter.lua")
+includeFile("relics/battlefield/battlefield_rebel_soldier.lua")
+includeFile("relics/battlefield/battlefield_rebel_squad_leader.lua")

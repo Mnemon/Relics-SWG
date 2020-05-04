@@ -1,0 +1,41 @@
+battlefield_imperial_storm_sniper = Creature:new {
+	customName = "Battlefield Stormtrooper Sniper",
+	randomNameType = NAME_STORMTROOPER,
+	randomNameTag = true,
+	socialGroup = "imperial",
+	faction = "imperial",
+	level = 112,
+	chanceHit = .85,
+	damageMin = 850,
+	damageMax = 1200,
+	baseXp = 10000,
+	baseHAM = 23000,
+	baseHAMmax = 26000,
+	armor = 2,
+	resists = {80,50,50,50,50,50,50,50,25},
+	meatType = "",
+	meatAmount = 0,
+	hideType = "",
+	hideAmount = 0,
+	boneType = "",
+	boneAmount = 0,
+	milk = 0,
+	tamingChance = 0,
+	ferocity = 0,
+	pvpBitmask = ATTACKABLE,
+	creatureBitmask = PACK + KILLER,
+	optionsBitmask = AIENABLED + CONVERSABLE,
+	diet = HERBIVORE,
+	scale = 1.5,
+
+	templates = {
+			"object/mobile/dressed_stormtrooper_sniper_m.iff",
+			"object/mobile/dressed_stormtrooper_black_black.iff",
+	},
+	lootGroups = {},
+	weapons = {"imperial_weapons_medium"},
+	conversationTemplate = "",
+	attacks = merge(riflemanmaster,marksmanmaster)
+}
+
+CreatureTemplates:addCreatureTemplate(battlefield_imperial_storm_sniper, "battlefield_imperial_storm_sniper")

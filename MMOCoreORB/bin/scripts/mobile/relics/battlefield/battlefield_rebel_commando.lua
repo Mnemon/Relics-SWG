@@ -1,0 +1,46 @@
+battlefield_rebel_commando = Creature:new {
+	customName = "Battlefield Commando",
+	randomNameType = NAME_GENERIC,
+	randomNameTag = true,
+	socialGroup = "rebel",
+	faction = "rebel",
+	level = 95,
+	chanceHit = .75,
+	damageMin = 745,
+	damageMax = 1000,
+	baseXp = 8000,
+	baseHAM = 19000,
+	baseHAMmax = 22000,
+	armor = 2,
+	resists = {80,50,50,50,50,50,50,50,25},
+	meatType = "",
+	meatAmount = 0,
+	hideType = "",
+	hideAmount = 0,
+	boneType = "",
+	boneAmount = 0,
+	milk = 0,
+	tamingChance = 0,
+	ferocity = 0,
+	pvpBitmask = ATTACKABLE,
+	creatureBitmask = PACK + KILLER,
+	optionsBitmask = AIENABLED,
+	diet = HERBIVORE,
+	scale = 1.25,
+
+	templates = {
+		"object/mobile/dressed_rebel_commando_human_female_01.iff",
+		"object/mobile/dressed_rebel_commando_human_male_01.iff",
+		"object/mobile/dressed_rebel_commando_moncal_male_01.iff",
+		"object/mobile/dressed_rebel_commando_rodian_male_01.iff",
+		"object/mobile/dressed_rebel_commando_twilek_female_01.iff",
+		"object/mobile/dressed_rebel_commando_zabrak_female_01.iff",
+	},
+	
+	lootGroups = {},
+	weapons = {"rebel_weapons_heavy"},
+	conversationTemplate = "",
+	attacks = merge(commandomaster,marksmanmaster)
+}
+
+CreatureTemplates:addCreatureTemplate(battlefield_rebel_commando, "battlefield_rebel_commando")

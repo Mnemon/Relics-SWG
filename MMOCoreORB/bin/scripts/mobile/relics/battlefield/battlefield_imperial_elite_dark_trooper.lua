@@ -1,0 +1,42 @@
+battlefield_imperial_elite_dark_trooper = Creature:new {
+	customName = "Battlefield Dark Trooper",
+	randomNameType = NAME_DARKTROOPER,
+	randomNameTag = true,
+	socialGroup = "imperial",
+	faction = "imperial",
+	level = 113,
+	chanceHit = .9,
+	damageMin = 900,
+	damageMax = 1300,
+	baseXp = 11000,
+	baseHAM = 25000,
+	baseHAMmax = 28000,
+	armor = 2,
+	resists = {80,50,50,50,50,50,50,50,25},
+	meatType = "",
+	meatAmount = 0,
+	hideType = "",
+	hideAmount = 0,
+	boneType = "",
+	boneAmount = 0,
+	milk = 0,
+	tamingChance = 0,
+	ferocity = 0,
+	pvpBitmask = ATTACKABLE,
+	creatureBitmask = PACK + KILLER,
+	optionsBitmask = AIENABLED,
+	diet = HERBIVORE,
+	scale = 1.75,
+
+	templates = {
+		"object/mobile/dark_trooper.iff",
+		"object/mobile/dressed_dark_trooper_black_hole.iff",
+		"object/mobile/dressed_stormtrooper_black_black.iff",
+		},
+	lootGroups = {},
+	weapons = {"imperial_weapons_heavy"},
+	conversationTemplate = "",
+	attacks = merge(carbineermaster,fencermaster)
+}
+
+CreatureTemplates:addCreatureTemplate(battlefield_imperial_elite_dark_trooper, "battlefield_imperial_elite_dark_trooper")
