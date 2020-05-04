@@ -1327,3 +1327,5 @@ includeFile("items/goggles/goggles_s05.lua")
 includeFile("items/goggles/goggles_s06.lua")
 
 -- Relics Custom
+includeFile("items/painting/painting_may_4th.lua")
+includeFile("items/creature/greater_krayt_dragon_pearl.lua")

@@ -375,3 +375,6 @@ includeFile("groups/named_crystals.lua")
 includeFile("groups/architect_satchel.lua")
 includeFile("groups/goggles.lua")
 includeFile("groups/resource_deed.lua")
+includeFile("groups/relics_may_4th.lua")
+includeFile("groups/creature/greater_krayt_pearls.lua")
+
