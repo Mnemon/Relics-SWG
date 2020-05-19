@@ -5,7 +5,7 @@ junk = {
 	minimumLevel = 0,
 	maximumLevel = 0,
 	lootItems = {
-		{groupTemplate = "loot_kit_parts", weight = 2000000},
+		{groupTemplate = "loot_kit_parts", weight = 2369230},
 		{groupTemplate = "architect_satchel", weight = 2000000},
 		{itemTemplate = "bantha_doll", weight = 369230},
  		{groupTemplate = "forage_bait", weight = 369230},
@@ -27,7 +27,7 @@ junk = {
 		{itemTemplate = "empty_cage", weight = 369230},
 		{itemTemplate = "expensive_basket", weight = 369230},
 		--{itemTemplate = "expired_ticket", weight = 296296},
-		{itemTemplate = "hyperdrive_part", weight = 369230},
+		--{itemTemplate = "hyperdrive_part", weight = 369230},
 		--{itemTemplate = "ledger", weight = 369230},
 		--{itemTemplate = "locked_briefcase", weight = 369230},
 		{itemTemplate = "locked_container", weight = 369230},
