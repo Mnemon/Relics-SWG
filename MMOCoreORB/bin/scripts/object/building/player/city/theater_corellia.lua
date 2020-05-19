@@ -49,7 +49,7 @@ object_building_player_city_theater_corellia = object_building_player_city_share
 	allowedZones = {"corellia", "talus"},
 	length = 5,
 	width = 6,
-	abilityRequired = "place_theater",
+	--abilityRequired = "place_theater",
 	skillMods = {
 		{"private_buff_mind", 100},
 		{"private_med_battle_fatigue", 5},

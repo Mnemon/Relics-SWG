@@ -49,7 +49,7 @@ object_building_player_city_theater_naboo = object_building_player_city_shared_t
 	width = 6,
 	gameObjectType = 524,
 	planetMapCategory = "theater",
-	abilityRequired = "place_theater",
+	--abilityRequired = "place_theater",
 	skillMods = {
 		{"private_buff_mind", 100},
 		{"private_med_battle_fatigue", 5},

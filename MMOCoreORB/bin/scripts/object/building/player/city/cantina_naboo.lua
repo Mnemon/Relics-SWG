@@ -50,7 +50,7 @@ object_building_player_city_cantina_naboo = object_building_player_city_shared_c
 	planetMapCategory = "cantina",
 	cityRankRequired = 2,
 	limitToOnePerCity = 0,
-	abilityRequired = "place_cantina",
+	--abilityRequired = "place_cantina",
 	skillMods = {
 		{"private_buff_mind", 100},
 		{"private_medical_rating", 100},
