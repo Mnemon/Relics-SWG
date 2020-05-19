@@ -15,7 +15,7 @@ end
 
 function AdditionalShuttlesPlay:spawnSceneObjects()
 
-	spawnSceneObject("tatooine", "object/building/tatooine/shuttleport_tatooine.iff", 3775, 6, 2266, 0, 1, 0, 0, 0) -- Mos Taike
+	spawnSceneObject("tatooine", "object/building/tatooine/shuttleport_tatooine.iff", 3775, 6.75, 2266, 0, 1, 0, 0, 0) -- Mos Taike
 	spawnSceneObject("tatooine", "object/building/tatooine/shuttleport_tatooine.iff", -5051, 75, -6548, 0, 1, 0, 0, 0) -- Wayfar
 	spawnSceneObject("lok", "object/building/military/outpost_starport.iff", -1747, 12, -3033, 0, 1, 0, 0, 0) -- Imp Outpost Lok
 	spawnSceneObject("dathomir", "object/building/military/outpost_starport.iff", 4632, 123, -3228, 0, 1, 0, 0, 0) -- Aurillian Outpost
