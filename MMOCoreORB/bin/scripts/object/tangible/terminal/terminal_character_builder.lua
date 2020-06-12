@@ -68,7 +68,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 	},
 
 	itemList = {
-		"Enhance Character", "enhance_character",
+		--"Enhance Character", "enhance_character",
 		"Reset Buffs", "reset_buffs",		
 		"Character Options",
 		{
